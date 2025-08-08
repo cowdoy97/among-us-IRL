@@ -1,18 +1,16 @@
-# Among Us in real life
+# Among Us IRL
 
-I hacked together this small little web app for facilitating a game of Among Us in real life.
+Used this guys code: https://github.com/michaelgira23/among-us-real-life 
+and edited to be exactly what I needed.
 
 ## Features
 
 -   Assign impostors/crewmates
--   Assign tasks
+-   Assign tasks (Easily edited)
 -   Checking off tasks updates a global progress bar in real-time
-
-Audio recordings from [https://www.voicy.network/pages/among-us](https://www.voicy.network/pages/among-us)
-
-## Screenshot
-
-<img src="media/IMG_0976.PNG" width="50%" />
+-   Win logic for crew/imposters
+-   Voting Systems
+-   Disables app for those who have been reported dead
 
 ## Usage
 
@@ -26,8 +24,6 @@ You may want to modify the following properties located in [`src/index.js`](http
 
 [`N_TASKS`](https://github.com/michaelgira23/among-us-real-life/blob/master/src/index.js#L31) - Number of tasks to assign each player
 
-[`N_IMPOSTORS`](https://github.com/michaelgira23/among-us-real-life/blob/master/src/index.js#L32) - Number of impostors to assign each round
-
 ### 2. Start the backend
 
 Start the backend with
@@ -37,7 +33,6 @@ $ npm install
 $ npm start
 ```
 
-:information_source: Use a utility like [Nodemon](https://nodemon.io/) to automatically restart the backend upon any changes. This is useful when modifying the number of impostors or tasks.
 
 ### 3. Connect to the admin dashboard
 
