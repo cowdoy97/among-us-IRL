@@ -44,7 +44,3 @@ Pressing the start button will reset task progress, assign new tasks, and assign
 
 Players may access the the game at [http://localhost:4046](http://localhost:4046). On other computers (or phones), you will need to enter the computer's local IP or use a tunneling service like [ngrok](https://ngrok.com). Alternatively, you could deploy this yourself.
 
-## Known issues
-
--   Sometimes, duplicate tasks are assigned (temporary workaround is to start another game)
--   On some Android phones, hiding the browser will reset its state, therefore losing your tasks
