@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+h1 {
+	font-family: 'Comic Neue', sans-serif;
+}
+
+/* Settings Container Styles */
+.settings-container {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.setting {
+    display: flex;
+    align-items: center;
+}
+.setting label {
+    margin-right: 0.5rem;
+}
+#impostor-count-input {
+    width: 4rem;
+    padding: 0.25rem;
+}
+
+/* Player List Styles */
+.player-list-container {
+	margin-top: 2rem;
+}
+#player-list {
+	list-style: none;
+	padding: 0;
+}
+#player-list li {
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* NEW: Container for the buttons */
+.player-actions {
+    display: flex;
+    align-items: center;
+}
+
+#player-list li button {
+	margin-left: 0.5rem; /* Adjusted margin */
+    width: auto;
+    padding: 5px 10px;
+}
+
+/* NEW: Style for the remove button */
+.remove-player-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+}
+
+#player-list .dead {
+	text-decoration: line-through;
+	opacity: 0.6;
+	background-color: #f0f0f0;
+}
+#player-list .role {
+    display: none;
+}
+#player-list.show-roles .role {
+    display: inline;
+}

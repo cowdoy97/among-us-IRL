@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Among Us - Admin</title>
+		<link rel="stylesheet" href="/admin.css" />
+	</head>
+	<body>
+		<h1>Admin Controls</h1>
+
+		<div class="settings-container">
+			<div class="setting">
+				<label for="impostor-count-input">Number of Impostors:</label>
+				<input type="number" id="impostor-count-input" value="1" min="1" max="3" />
+			</div>
+			<button id="show-hide-roles-btn">Show Roles</button>
+		</div>
+
+		<button id="start-game">Start Game</button>
+		<button id="restart-game-btn">Restart Game</button>
+
+		<div class="player-list-container">
+			<h2>Players</h2>
+			<ul id="player-list">
+				<!-- Player list will be generated here -->
+			</ul>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+		<script src="/admin.js"></script>
+	</body>
+</html>
