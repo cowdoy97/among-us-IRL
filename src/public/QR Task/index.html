@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among Us IRL Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start Button -->
+        <div id="start-container">
+            <h1>Verification Terminal</h1>
+            <button id="start-button">Begin Scan</button>
+            <p id="error-message" class="error-text" style="display: none;"></p>
+        </div>
+
+        <!-- QR Code Scanner (Initially Hidden) -->
+        <div id="qr-scanner-container" style="display: none;">
+            <h1>Align QR Code with Camera</h1>
+            <div class="scanner-wrapper">
+                <div id="qr-reader"></div>
+                <div class="qr-box-overlay">
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display Scanned Name -->
+        <div id="scanned-info-container" style="display: none;">
+            <h1>Welcome, Crewmate</h1>
+            <p id="crewmate-name"></p>
+        </div>
+
+        <!-- Face Capture -->
+        <div id="face-capture-container" style="display: none;">
+            <h1>Face Scan</h1>
+            <video id="face-video" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+        </div>
+
+        <!-- Processing Animation -->
+        <div id="processing-container" style="display: none;">
+            <div class="loader"></div>
+            <p>Processing...</p>
+        </div>
+
+        <!-- Approved Message -->
+        <div id="approved-container" style="display: none;">
+            <h1>Approved</h1>
+            <p id="refresh-message">Resetting for next crewmate...</p>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="processing-sound" src="media/verifying.m4a" preload="auto" loop></audio>
+    <!-- THIS IS THE NEW AUDIO ELEMENT FOR THE APPROVAL SOUND -->
+    <audio id="approved-sound" src="media/approved.m4a" preload="auto"></audio>
+
+    <script src="html5-qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

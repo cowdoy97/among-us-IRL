@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#app {
+    padding: 2em;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    margin: 1em 0;
+}
+
+/* --- Start Button Styling --- */
+#start-button {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover {
+    background-color: #2980b9;
+}
+
+.error-text {
+    color: #e74c3c;
+    margin-top: 1em;
+}
+
+/* --- Scanner Styling --- */
+.scanner-wrapper {
+    position: relative;
+    width: 500px;
+    height: 375px;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 4px solid #444;
+}
+
+#qr-reader {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- THIS IS THE UPDATED PART --- */
+/* This flips the video back to normal for the user to see */
+#qr-reader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* Flips the video horizontally */
+}
+
+.qr-box-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+}
+
+.qr-box-overlay .corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: #3498db;
+    border-width: 0;
+}
+
+.corner.top-left { top: -5px; left: -5px; border-top-width: 5px; border-left-width: 5px; }
+.corner.top-right { top: -5px; right: -5px; border-top-width: 5px; border-right-width: 5px; }
+.corner.bottom-left { bottom: -5px; left: -5px; border-bottom-width: 5px; border-left-width: 5px; }
+.corner.bottom-right { bottom: -5px; right: -5px; border-bottom-width: 5px; border-right-width: 5px; }
+
+#crewmate-name {
+    font-size: 2.5em;
+    color: #3498db;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+#face-capture-container {
+    border: 4px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+
+/* The video in the face-capture part should also be mirrored */
+#face-video {
+    transform: scaleX(-1);
+}
+
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

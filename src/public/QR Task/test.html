@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Camera Test</title>
+    <style>
+        body { font-family: sans-serif; background-color: #222; color: white; text-align: center; margin-top: 50px; }
+        video { border: 5px solid steelblue; background-color: black; }
+        button { font-size: 1.5em; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Camera Test</h1>
+    <p>This page tests the most basic camera functionality of your browser.</p>
+
+    <button id="cameraButton">Start Camera</button>
+    <br><br>
+    
+    <video id="video" width="500" height="375" autoplay playsinline></video>
+
+    <script>
+        const videoElement = document.getElementById('video');
+        const cameraButton = document.getElementById('cameraButton');
+
+        cameraButton.addEventListener('click', async () => {
+            console.log("Requesting camera access...");
+            try {
+                // The simplest possible way to request the camera
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                
+                console.log("Camera stream received!");
+                videoElement.srcObject = stream;
+            } catch (err) {
+                console.error("An error occurred: ", err);
+                alert("Could not start camera. Error: " + err.name);
+            }
+        });
+    </script>
+
+</body>
+</html>
